@@ -43,24 +43,11 @@ public class AlarmClock extends Clock {
         this.wakeUpTime[1]=hour;
     }
 
-    public void clock(){ //Overiding the super() because we change something in the loop.
-        while(true){
-            display();
-
-            try {
-                Thread.sleep(1000);
-                this.increment();
-                if(this.wakeUpTime[0]==this.getMinutes() && this.wakeUpTime[1]==this.getHour()) //We only add a checking, if the current time equals the time to wake up
-                    this.activate(); //We activate the actions.
-
-                } catch (InterruptedException e) { //Errors handling.
-                e.printStackTrace();
-            }
-
-
-                //gérer le snooze
-
-    }
+    @Override
+    public void increment(){
+        super.increment();
+        if(this.wakeUpTime[0]==this.getMinutes() && this.wakeUpTime[1]==this.getHour()) //We only add a checking, if the current time equals the time to wake up
+            this.activate(); //We activate the actions.
     }
 
 

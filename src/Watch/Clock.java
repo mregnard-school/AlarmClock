@@ -43,14 +43,18 @@ public class Clock {
 
     public void clock(){
         while(true){  //Infinite loop the clock is always running till it runs out of energy. Not handle here.
-            display(); //We call the display function.
-            try {
-                Thread.sleep(1000); //Make the thread wait for 1000 ms.
-                this.increment(); //We increment the clock
-            } catch (InterruptedException e) { //Errors handling.
-                e.printStackTrace();
-            }
+            this.display(); //We call the display function.
+            this.sleep(1000);
+            this.increment();
+        }
+    }
 
+
+    public void sleep(int n){
+        try {
+            Thread.sleep(n);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
