@@ -8,11 +8,11 @@ public class WakingAction {
 
     private boolean toActivate;
 
-    public WakingAction(){
+    WakingAction(){
         this.toActivate=true;
     }
 
-    public void toggle(){
+    private void toggle(){
         this.toActivate = !this.toActivate;
     }
 

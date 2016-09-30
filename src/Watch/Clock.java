@@ -33,7 +33,7 @@ public class Clock {
         clocks.flush();
     }
 
-    void display(){
+    private void display(){
         System.out.println(this.getHour() + "h" + this.getMinutes() + "m" + this.getSeconds() + "s");
     }
 
