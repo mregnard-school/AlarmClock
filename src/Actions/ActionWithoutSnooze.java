@@ -6,8 +6,5 @@ package Actions;
  */
 public abstract class ActionWithoutSnooze extends WakingAction {
 
-    public void activate(){
-        super.activate();
-    }
 
 }

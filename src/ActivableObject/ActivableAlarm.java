@@ -14,6 +14,7 @@ public class ActivableAlarm extends ActionSnooze { // TODO: 30/09/2016 change wi
         alarm = new Alarm();
     }
 
+    @Override
     public void activate(){
         super.activate();
         alarm.ring();

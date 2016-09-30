@@ -1,6 +1,8 @@
 package Actions;
 
+import WakingObject.Alarm;
 import Watch.AlarmClock;
+import Watch.Clock;
 
 /**
  * Created by Irindul on 01/01/15.
@@ -18,10 +20,12 @@ public abstract class ActionSnooze extends WakingAction {
         this.toSnooze = !this.toSnooze;
     }
 
+    @Override
     public void activate() {
-        super.activate();
         if(toSnooze){
-
+            Clock.sleep(1000);
+        } else {
+            super.activate();
         }
         //récupere action snooze
 

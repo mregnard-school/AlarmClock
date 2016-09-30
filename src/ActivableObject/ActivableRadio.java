@@ -14,6 +14,7 @@ public class ActivableRadio extends ActionSnooze { // TODO: 30/09/2016 change wi
         radio = new Radio();
     }
 
+    @Override
     public void activate(){
         super.activate();
         radio = new Radio(); //A refactor

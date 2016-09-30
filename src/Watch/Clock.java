@@ -50,7 +50,7 @@ public class Clock {
     }
 
 
-    public void sleep(int n){
+    public static void sleep(int n){
         try {
             Thread.sleep(n);
         } catch (InterruptedException e) {
